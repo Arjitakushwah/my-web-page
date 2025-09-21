@@ -6,7 +6,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    padding: 20px;
     margin: 0;
 }
 
@@ -22,8 +22,48 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 10px; /* Added margin for spacing */
 }
 
 button:hover {
     background-color: #155ab6;
+}
+
+/* --- New CSS for the Contact Form --- */
+
+.contact-form {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #333;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+.contact-form button[type="submit"] {
+    width: 100%;
 }
