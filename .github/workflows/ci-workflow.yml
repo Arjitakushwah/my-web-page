@@ -1,0 +1,30 @@
+# This workflow is for Assignment 1: Create a Simple GitHub Actions CI Workflow.
+# It demonstrates the basic structure of a GitHub Actions workflow.
+# This workflow triggers on every push event to the 'main' branch.
+
+name: CI Workflow
+
+on:
+  # Configure the workflow to run on push events.
+  push:
+    branches:
+      # Only run on pushes to the main branch.
+      - main
+
+jobs:
+  # Define a single job named 'build'.
+  build:
+    # Specify the runner environment.
+    runs-on: ubuntu-latest
+
+    # A sequence of tasks called steps.
+    steps:
+      # Step 1: Check out the repository's code.
+      # This uses a pre-built action from the GitHub Marketplace.
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Print a success message to the logs.
+      # This is a simple shell command.
+      - name: Print success message
+        run: echo "Workflow executed successfully"
